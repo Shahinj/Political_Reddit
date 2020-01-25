@@ -1,0 +1,26 @@
+Chosen feature intersection: [  2  83  96 149]
+2: Number of first-person pronouns
+83: liwc_money
+96: liwc_quant
+149: receptiviti_insecure
+
+These features indicate that most of comments processed are probably about money and how different parties argue around it.
+For example, one of the main political debates is about how much should be invested in different sectors, such as environmental issues
+and how much does that affect the economy. The first-person pronouns and receptiviti_insecure can also be an indication of how individuals
+argue about their issues and experiences and they make a point that the money should be invested on those problems.
+
+
+P-values all ended up being zero after rounding, so we cannot make a statement here. However, generally, I expect the p-values to be 
+higher when we have more data, since it is easier to find features that are very specific to a class when there is small set of data.
+
+
+Top-5 at higher: [ 96  83   2 149  11]
+
+96:  liwc_quant
+83:  liwc_money
+2:   Number of first-person pronouns
+149: receptiviti_insecure
+11:  Number of proper nouns
+
+Again, same explanation as mentioned for part a. The number of proper nouns is an indication on special events, people and issues.
+This makes sense, since again in politcal discussions, people refer to specific events, and specific person's government.

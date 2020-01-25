@@ -1,0 +1,8 @@
+order from worst to best accuracy: SGDClassifier,GaussianNB,RandomForestClassifier,MLPClassifier,AdaBoostClassifier
+
+Makes sense, since the last 3 are far more complex algorithms than the original ones.
+We expect AdaBoostClassifier to be better than RandomForestClassifier, because it is basically a more complicated RandomForestClassifier.
+Same with MLPClassifier and GaussianNB, since in MLPClassifier, we can learn the weights of the words better.
+The confusion matrix for GaussianNB is suggesting that the model is dominantly predicting class 2, which is problematic.
+Overall, the accuracies are not that great, and we are slightly above random chance (25%).
+

@@ -1,0 +1,16 @@
+1: 0.3781
+5: 0.4285
+10: 0.4293
+15: 0.4311
+20: 0.4444
+
+
+Obviously, as we increase the training set size, the accuracy is going to be improved. The reason for it is that when we have a small data,
+the classifier is going to learn that small dataset very well, but because it is small, it might not be a good representative of the whole
+data. So we wouldn't do as great in the test set. For example, if the training set is a small skewed set, we could actually end up with an
+extremely bad results. 
+It is also notable that the increase in accuracy is more steep and visible when we start to increase our training set initially. For example,
+once the classifier has 15K of data, it is sufficinet for it and adding 5K more is not making that much of a difference, where as adding 4K
+when we only have 1K of data, is basically increase the training set by 400%, which is enourmous. So the accuracy improves much more there.
+This whole pattern is why these type of problems (machine learning in general) is also called big data applications, because with small samples,
+it is hard to have a low variance-low bias model that has predictive power.
