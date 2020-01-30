@@ -1,0 +1,50 @@
+Results for SGDClassifier:
+	Accuracy: 0.3312
+	Recall: [0.5979, 0.3862, 0.2768, 0.3629]
+	Precision: [0.2564, 0.2504, 0.7759, 0.0446]
+	Confusion Matrix: 
+[[ 507  232 1205   33]
+ [  74  502 1380   49]
+ [ 198  174 1551   76]
+ [  69  392 1468   90]]
+
+Results for GaussianNB:
+	Accuracy: 0.3441
+	Recall: [0.581, 0.2912, 0.4546, 0.3158]
+	Precision: [0.2686, 0.8344, 0.2056, 0.0684]
+	Confusion Matrix: 
+[[ 531 1241  139   66]
+ [ 100 1673  156   76]
+ [ 200 1231  411  157]
+ [  83 1600  198  138]]
+
+Results for RandomForestClassifier:
+	Accuracy: 0.3930
+	Recall: [0.4665, 0.335, 0.4219, 0.3488]
+	Precision: [0.5346, 0.4414, 0.3567, 0.2422]
+	Confusion Matrix: 
+[[1057  459  224  237]
+ [ 397  885  360  363]
+ [ 445  528  713  313]
+ [ 367  770  393  489]]
+
+Results for MLPClassifier:
+	Accuracy: 0.4146
+	Recall: [0.5101, 0.3799, 0.3746, 0.3767]
+	Precision: [0.5878, 0.3865, 0.6193, 0.0703]
+	Confusion Matrix: 
+[[1162  314  447   54]
+ [ 390  775  756   84]
+ [ 359  305 1238   97]
+ [ 367  646  864  142]]
+
+Results for AdaBoostClassifier:
+	Accuracy: 0.4449
+	Recall: [0.5735, 0.3718, 0.4533, 0.3933]
+	Precision: [0.5468, 0.4339, 0.4662, 0.3348]
+	Confusion Matrix: 
+[[1081  373  282  241]
+ [ 288  870  409  438]
+ [ 287  416  932  364]
+ [ 229  681  433  676]]
+

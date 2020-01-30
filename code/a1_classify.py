@@ -183,7 +183,8 @@ def class33(output_dir, X_train, X_test, y_train, y_test, i, X_1k, y_1k):
     with open(f"{output_dir}/a1_3.3.txt", "w") as outf:
         # Prepare the variables with corresponding names, then uncomment
         # this, so it writes them to outf.
-        for k in range(5,51):
+        search_range = [5,50]
+        for k in search_range:
             selector = SelectKBest(f_classif, k)
             X_new = selector.fit_transform(X_train, y_train)
             pp = selector.pvalues_
@@ -249,6 +250,7 @@ def class34(output_dir, X_train, X_test, y_train, y_test, i):
     with open(f"{output_dir}/a1_3.4.txt", "w") as outf:
         # Prepare kfold_accuracies, then uncomment this, so it writes them to outf.
         for train_index, test_index in kf.split(X_train):
+            kfold_accuracies = []
             X_train_fold, X_test_fold = X_train[train_index], X_train[test_index]
             y_train_fold, y_test_fold = y_train[train_index], y_train[test_index]
             for classifier_index, classifier_name in enumerate(classifiers):
@@ -268,8 +270,8 @@ def class34(output_dir, X_train, X_test, y_train, y_test, i):
                 conf_matrix = confusion_matrix(y_test_fold,classifier.predict(X_test_fold))
                 acc = accuracy(conf_matrix)
                 classifier_accuracies[classifier_index].append(acc)
-                
-                
+                kfold_accuracies.append(acc)
+            outf.write(f'Kfold Accuracies: {[round(acc, 4) for acc in kfold_accuracies]}\n')                
             
         kfold_accuracies = [np.mean(i) for i in classifier_accuracies]
         

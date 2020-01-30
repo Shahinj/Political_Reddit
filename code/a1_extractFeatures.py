@@ -103,6 +103,7 @@ def extract1(comment):
     '''   
     # TODO: Extract features that rely on capitalization.
     #get sentences
+    feats = np.zeros((1, 173))
     if(comment == ''):
         return feats
     if(comment[-1] == '\n'):
@@ -112,7 +113,6 @@ def extract1(comment):
     splitted = []
     for sent in comments:
         splitted += sent.split(' ')
-    feats = np.zeros((1, 173))
     ###1 caps
     uppers = [ i[:i.rfind('/')] for i in splitted if str.isupper( i[:i.rfind('/')]) == True and len(i[:i.rfind('/')]) >= 3]
     feats[0,0] = len(uppers)
