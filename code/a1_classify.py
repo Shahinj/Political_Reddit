@@ -116,7 +116,7 @@ def class32(output_dir, X_train, X_test, y_train, y_test, iBest):
    '''
     # print('TODO Section 3.2')
     classifiers = ['SGDClassifier', 'GaussianNB', 'RandomForestClassifier', 'MLPClassifier', 'AdaBoostClassifier']
-    increments = [1,5,10,15,20]
+    increments = [1000,5000,10000,15000,20000]
     
     classifier_name = classifiers[iBest]
     if  classifier_name == 'SGDClassifier':
@@ -134,8 +134,8 @@ def class32(output_dir, X_train, X_test, y_train, y_test, iBest):
     
     with open(f"{output_dir}/a1_3.2.txt", "w") as outf:
         for inc in increments:
-            idx = np.random.choice(X_train.shape[0], size= inc * 1000, replace = False)
-            if(inc == 1):
+            idx = np.random.choice(X_train.shape[0], size= inc, replace = False)
+            if(inc == 1000):
                 X_1k = X_train[idx,:]
                 y_1k = y_train[idx]
             classifier.fit(X_train[idx,:], y_train[idx])
@@ -189,7 +189,8 @@ def class33(output_dir, X_train, X_test, y_train, y_test, i, X_1k, y_1k):
             X_new = selector.fit_transform(X_train, y_train)
             pp = selector.pvalues_
             k_feat = k
-            p_values = pp[np.argpartition(pp, k)[:k]]
+            p_values = pp
+            #[np.argpartition(pp, k)[:k]]
         # for each number of features k_feat, write the p-values for
         # that number of features:
             outf.write(f'{k_feat} p-values: {[round(pval, 4) for pval in p_values]}\n')
@@ -242,7 +243,13 @@ def class34(output_dir, X_train, X_test, y_train, y_test, i):
     
     classifiers = ['SGDClassifier', 'GaussianNB', 'RandomForestClassifier', 'MLPClassifier', 'AdaBoostClassifier']
 
-    classifier_name = classifiers[i]
+    #combine the sets
+    X_train = np.vstack((X_train,X_test))
+    y_train = np.hstack((y_train,y_test))
+    print(X_train.shape)
+    print(y_train.shape)
+
+
     
     
     kf = KFold(n_splits=5, shuffle = True)
