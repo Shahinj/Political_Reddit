@@ -48,3 +48,9 @@ Results for AdaBoostClassifier:
  [ 287  416  932  364]
  [ 229  681  433  676]]
 
+
+Order from worst to best accuracy: SGDClassifier, GaussianNB, RandomForestClassifier, MLPClassifier, AdaBoostClassifier
+
+The ordering makes sense. The more complex algorithms are the one that have more tunable parameters, such as MLP and
+AdaBoost and hence they are able to learn the data better. One thing to note is that for NB, the algorithm predicts
+class 2 (Center) dominantly, which reduces the accuracy of it significantly.

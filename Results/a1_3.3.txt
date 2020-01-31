@@ -4,3 +4,25 @@ Accuracy for 1k: 0.3201
 Accuracy for full dataset: 0.3633
 Chosen feature intersection: [  2  83 149]
 Top-5 at higher: [ 83  96 149   2 143]
+
+(a)	2: Number of first-person pronouns
+	83: liwc_money
+	149: receptivity_insecure
+One explanation could be that the data that was used for the classifier is heavily biased towards economical discussions and issues that come up 
+with elections, as each party proposes different methods to improve the well being of the economy and people. For example, spendings in environmental
+issues is one of the main aspects that separate the left and right parties, and some are more worried about the money spent, while others worry about
+the environment and health issues. The use of first-person pronouns also indicate stating of ones view points, which could add to the above explanation.  
+
+(b)	The p_values are the same, since we used the 32K dataset in both cases. In general however, the more features we select,
+	the pvalues become higher, as in we are selecting features that are not great at separating classes. I believe it is also
+	expected that if we increase the training set size, the pvalues increase, as some features which were good at separating
+	classes might not be that useful anymore given more data.
+
+(c)	2: Number of first-person pronouns
+	83: liwc_money
+	149: receptiviti_insecure
+	96: liwc_quant
+	143: receptiviti_happiness
+The same explanation goes here as well, with more justifications. Quant feature indicates quantitative analysis of the issues that happened around the time.
+For example, a comment could include the statement that if we spend x on environment, the debt will go up by y which is very quantitative. Happiness also
+goes with the insecurity, and certain groups argue that certain policies favor them and make them happy, while it makes others insecure.

@@ -3,3 +3,11 @@
 10000: 0.4351
 15000: 0.4432
 20000: 0.4441
+
+As we increase the training set size, the accuracy gets better. The reason for it is that when we have a small set of data,
+the classifiers are going to learn that small set very well, but that might not be a good representative of our data as a whole.
+So we are not going to do great in the test setting with unseen data. The more training data that we add, the better the model
+becomes, and it is more probable to achieve a low bias and low variance model.
+It is also notable that the increase in accuracy is more steep and visible at the beginning but plateaus as we keep increasing
+the size of the training set. In other words, the classifiers become indifferent after a certain amount of data has been used, 
+and increasing the size of the training set increases computations, with little to gain in terms of learning.
