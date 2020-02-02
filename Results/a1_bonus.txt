@@ -48,3 +48,15 @@ Results for SVM:
  [ 324  339 1060  276]
  [ 183  620  302  914]]
 
+
+With the new features selected, we are able to increase the acuracy using SGDClassifier and SVM to up to 50%. Using SVM also allow us to extract the keywords (lemmas) with the 
+highest coefficient, which will help us identify the topics that are being discussed in the comments. They are also graphed, and higher values mean higher coefficient.
+
+As can be seen, the topics discussed are around these areas:
+Left: Sexual harrasments and abuse issues, LGBTQ rights, and abortion rights
+Center: Shooting of Michael Brown on August 9, 2014 by an officer in Ferguson (Very interesting in my opinion since we get keywords like [loot, cruiser, atrocity, tear gas, eyewitness and ferguson]), again LGBTQ rights, and the missing Malaysian Airline (for some reason!)
+Right: Harrasments and abuse, different senators, FAKE NEWS!!!, and of course Donald Trump.
+Alt:  Illuminati, Middle East conflicts around Israel and Egypt, NSA and Snowden (of course)  
+
+This method is one of efficient ways of extracting opinions and understanding the topics, without reading all the data manually, which is great!
+    

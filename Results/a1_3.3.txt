@@ -14,9 +14,10 @@ issues is one of the main aspects that separate the left and right parties, and 
 the environment and health issues. The use of first-person pronouns also indicate stating of ones view points, which could add to the above explanation.  
 
 (b)	The p_values are the same, since we used the 32K dataset in both cases. In general however, the more features we select,
-	the pvalues become higher, as in we are selecting features that are not great at separating classes. I believe it is also
-	expected that if we increase the training set size, the pvalues increase, as some features which were good at separating
-	classes might not be that useful anymore given more data.
+	the pvalues become higher, as in we are selecting features that are not great at separating classes. In order to answer
+	this question, I summed both arrays, and the 1K dataset had a very large pvalues. The reason for this is that as the 
+	dataset size grows, even small perturbations and deviations from the distribution becomes significant, and hence results
+	in lower pvalues. 
 
 (c)	2: Number of first-person pronouns
 	83: liwc_money
